@@ -1,0 +1,12 @@
+C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\bin\Debug\LanguageLearner.exe.config
+C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\bin\Debug\LanguageLearner.exe
+C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\bin\Debug\LanguageLearner.pdb
+C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\bin\Debug\LanguageLearner.xml
+C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\obj\Debug\LanguageLearner.vbproj.AssemblyReference.cache
+C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\obj\Debug\LanguageLearner.Resources.resources
+C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\obj\Debug\LanguageLearner.vbproj.GenerateResource.cache
+C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\obj\Debug\LanguageLearner.vbproj.CoreCompileInputs.cache
+C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\obj\Debug\LanguageLearner.exe
+C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\obj\Debug\LanguageLearner.xml
+C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\obj\Debug\LanguageLearner.pdb
+C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\obj\Debug\LanguageLearner.Form1.resources
