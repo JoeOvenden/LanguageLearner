@@ -10,3 +10,5 @@ C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\obj\Debug\LanguageLe
 C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\obj\Debug\LanguageLearner.xml
 C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\obj\Debug\LanguageLearner.pdb
 C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\obj\Debug\LanguageLearner.Form1.resources
+C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\obj\Debug\LanguageLearner.UserControl1.resources
+C:\Users\joeov\source\repos\LanguageLearner\LanguageLearner\obj\Debug\LanguageLearner.UserControl2.resources

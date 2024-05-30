@@ -11,8 +11,8 @@ INSERT INTO Categories (name) VALUES ('Nouns'), ('Verbs'), ('Grammar'), ('Miscel
 
 CREATE TABLE Files (
     id Int IDENTITY(1,1) PRIMARY KEY,
-    name NVARCHAR(50),
-    FOREIGN KEY (id) REFERENCES Categories(id)
+    name NVARCHAR(50) UNIQUE,
+    category NVARCHAR(16) FOREIGN KEY REFERENCES Categories(name) NULL
 );
 
 CREATE TABLE Translations (

@@ -1,0 +1,4 @@
+- Practicing of vocab files implemented
+- Ability to switch directions of translation
+- Buttons add to check/uncheck all files to be practiced
+- Fixed crashing upon attempting to practice with zero files selected
