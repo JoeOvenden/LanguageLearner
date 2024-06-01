@@ -8,6 +8,7 @@ End Enum
 Public Class UserControl2
     Dim myForm As Form1
     Dim translationsToPractice As New List(Of Translation)()
+    Dim translationQueue As Queue(Of Translation)
     Dim random As New Random()
     Dim currentTranslation As Translation
     Dim translationDirection As Translation_Direction = Translation_Direction.Forward
@@ -26,12 +27,23 @@ Public Class UserControl2
                 translationsToPractice.Add(trans)
             Next
         Next
+        SetupTranslationQueue()
         SetNextTranslation()
     End Sub
 
+    Private Sub SetupTranslationQueue()
+        translationsToPractice = translationsToPractice.OrderByDescending(Function(t) t.TimeSinceLastPracticed).ToList()
+        translationQueue = New Queue(Of Translation)(translationsToPractice)
+    End Sub
+
     Private Sub SetNextTranslation()
-        Dim index As Integer = random.Next(translationsToPractice.Count)
-        currentTranslation = translationsToPractice(index)
+        ' Dim index As Integer = random.Next(translationsToPractice.Count)
+        ' currentTranslation = translationsToPractice(index)
+
+        If translationQueue.Count = 0 Then
+            SetupTranslationQueue()
+        End If
+        currentTranslation = translationQueue.Dequeue()
         lblWord2.Hide()
         lblWord2.ForeColor = Color.Black
         txtBoxTranslation.Clear()
@@ -70,18 +82,23 @@ Public Class UserControl2
         End If
 
         If txtBoxTranslation.Text = answer Then
-            lblWord2.ForeColor = Color.Green
-            Using connection As SqlConnection = myForm.GetSqlConnection()
-                Dim cmdStr As String = "UPDATE Translations SET date_last_practiced = @date WHERE id=@id"
-                Dim updateTranslationCommand As SqlCommand = New SqlCommand(cmdStr, connection)
-                updateTranslationCommand.Parameters.AddWithValue("@date", DateTime.Now)
-                updateTranslationCommand.Parameters.AddWithValue("@id", currentTranslation.Id)
-                myForm.ExecuteNonQuery(connection, updateTranslationCommand)
-            End Using
+            MarkTranslationAsCorrect()
         End If
     End Sub
 
+    Private Sub MarkTranslationAsCorrect()
+        lblWord2.ForeColor = Color.Green
+        currentTranslation.updateTimeLastCorrectlyPracticed(myForm)
+    End Sub
+
     Private Sub txtBoxTranslation_KeyDown(sender As Object, e As KeyEventArgs) Handles txtBoxTranslation.KeyDown
+        ' If the user presses ctrl + q after seeing the answer, it marks it as correct
+        If e.KeyCode = Keys.Q And (Control.ModifierKeys And Keys.Control) = Keys.Control Then
+            If lblWord2.Visible = True Then
+                MarkTranslationAsCorrect()
+            End If
+        End If
+
         If e.KeyCode = Keys.Enter Then
             If lblWord2.Visible = True Then
                 SetNextTranslation()

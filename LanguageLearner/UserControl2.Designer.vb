@@ -29,6 +29,7 @@ Partial Class UserControl2
         Me.lblWord2 = New System.Windows.Forms.Label()
         Me.txtBoxTranslation = New System.Windows.Forms.TextBox()
         Me.btnSwitchMode = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lblWord1
@@ -63,7 +64,7 @@ Partial Class UserControl2
         '
         Me.labelArrow.AutoSize = True
         Me.labelArrow.Font = New System.Drawing.Font("Yu Gothic", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelArrow.Location = New System.Drawing.Point(442, 206)
+        Me.labelArrow.Location = New System.Drawing.Point(473, 206)
         Me.labelArrow.Name = "labelArrow"
         Me.labelArrow.Size = New System.Drawing.Size(83, 62)
         Me.labelArrow.TabIndex = 3
@@ -74,7 +75,7 @@ Partial Class UserControl2
         Me.lblWord2.AutoSize = True
         Me.lblWord2.Font = New System.Drawing.Font("Yu Gothic", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblWord2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblWord2.Location = New System.Drawing.Point(628, 206)
+        Me.lblWord2.Location = New System.Drawing.Point(680, 206)
         Me.lblWord2.Name = "lblWord2"
         Me.lblWord2.Size = New System.Drawing.Size(178, 62)
         Me.lblWord2.TabIndex = 4
@@ -97,10 +98,20 @@ Partial Class UserControl2
         Me.btnSwitchMode.Text = "Switch Mode"
         Me.btnSwitchMode.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(25, 508)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(162, 13)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "To mark as correct, press ctrl + q"
+        '
         'UserControl2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnSwitchMode)
         Me.Controls.Add(Me.txtBoxTranslation)
         Me.Controls.Add(Me.lblWord2)
@@ -122,4 +133,5 @@ Partial Class UserControl2
     Friend WithEvents lblWord2 As Label
     Friend WithEvents txtBoxTranslation As TextBox
     Friend WithEvents btnSwitchMode As Button
+    Friend WithEvents Label1 As Label
 End Class
